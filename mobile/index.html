@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Mystic Rhythms Mobile</title>
+			
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>		
+
+		<script type="text/javascript">
+		  	$(document).ready(function() {
+		        /*put the last list item before the first item to prime the pump so 
+		          there is something to the left of the first item in the list */
+		        $('#carousel_ul li:first').before($('#carousel_ul li:last')); 
+		         
+		        //sliding right        
+		        $('#right_scroll').click(function(){
+		        
+		            //get the width of all the items plus margin 
+		            var item_width = $('#carousel_ul li').outerWidth() + 10;
+		            
+		            //calculate the new left indent of the UL
+		            var left_indent = parseInt($('#carousel_ul').css('left')) - item_width;
+		            
+		            //animate the slide using jquery animate function, .5 sec transition
+		            $('#carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){    
+		                
+		            //push first li item after last li item so we have infinite loop
+		            $('#carousel_ul li:last').after($('#carousel_ul li:first')); 
+		                
+		            //and set the left indent to the default, use neg value
+		            $('#carousel_ul').css({'left' : '-160px'});
+		       		}); 
+		        });
+		        
+		        //sliding left
+		        $('#left_scroll').click(function(){
+		            //same as sliding right above but in opposite direction 
+		            var item_width = $('#carousel_ul li').outerWidth() + 10;
+		            
+		            // use pos not neg value
+		            var left_indent = parseInt($('#carousel_ul').css('left')) + item_width;
+		            
+		            //animate slide
+		            $('#carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){    
+		            
+		            // push last item before first list item             
+		            $('#carousel_ul li:first').before($('#carousel_ul li:last')); 
+		            
+		            $('#carousel_ul').css({'left' : '-160px'});
+		            });
+		        });
+		  	});
+		</script>
+
+		<style type="text/css">
+		
+			#carousel_container {
+				width: 215px;
+				margin: auto;
+			}
+		
+			#carousel_inner {
+				float:left; /* important for inline positioning */
+				width:160px; /* important (this width = width of list item(including margin) * items shown */ 
+				overflow: hidden;  /* important (hide the items outside the div) */
+				margin: auto;
+		
+			}
+			
+			#carousel_ul {
+				position:relative;
+				left:-160px; /* important (this should be negative number of list items width(including margin) */
+				list-style-type: none; /* removing the default styling for unordered list items */
+				margin: 0px;
+				padding: 0px;
+				width:9999px; /* important */
+				/* non-important styling bellow */
+				padding-bottom:10px;
+			}
+			
+			#carousel_ul li{
+				float: left;                                  
+				width:150px;  /* fixed width, important */
+				padding:0px;
+				height:250px;
+				margin-top:10px;
+				margin-bottom:10px; 
+				margin-left:5px; 
+				margin-right:5px; 
+			}
+			
+			#carousel_ul li a {
+    			padding: 10px;
+			}
+			
+			#carousel_ul li img {
+			/*	cursor:pointer;
+				cursor: hand; */
+				border:0px; 
+			}
+				#left_scroll, #right_scroll{
+				float:left; 
+				/*height:50px; 
+				width:50px; */
+				margin-top:100px;
+			}
+
+			#left_scroll img, #right_scroll img{
+				/*styling*/
+				cursor: pointer;
+				cursor: hand;
+			}
+			
+			#header {
+				height: 35px;
+			}
+			
+			#logo{
+				width:150px;
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+			}
+			
+			.caption {
+			    border-color: black;
+			    border-style: solid;
+			    border-width: 1px;
+			    border-radius: 0px 0px 5px 5px;
+			    height: 30px;
+			    padding: 5px;
+			}
+				
+			#footer {
+				text-align:center;
+				display:inline-block;
+				font-size: 75%;
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div id="page" data-role="page" >
+
+			<div id="header" data-role="header" data-theme="b">
+				<a href="#" data-icon="home" data-iconpos="notext" data-mini="true"></a>
+				<img id="logo" src="../images/mr_main_logo_m.png" alt="Mystic Rhythms" />
+			</div>
+		
+			<div id="start-page" data-role="content" >
+
+				<div id='carousel_container'>
+			  		<div id='left_scroll' data-role="button" data-icon="arrow-l" data-iconpos="notext" data-theme="b"></div>
+			    		<div id='carousel_inner'>
+			        		<ul id='carousel_ul'>
+					            <li><a href='#' data-role="button"><img src='../images/cat_amp.jpg' /><br>Amps /<br>Effects</a></li>
+					            <li><a href='#' data-role="button"><img src='../images/cat_acoustic.jpg' /><br>Acoustic<br>Guitars</a></li>
+					            <li><a href='#' data-role="button"><img src='../images/cat_electric.jpg' /><br>Electric<br>Guitars</a></li>
+					            <li><a href='#' data-role="button"><img src='../images/cat_bass.jpg' /><br>Bass<br>Guitars</a></li>
+					            <li><a href='#' data-role="button"><img src='../images/cat_acc.jpg' /><br>Accessories</a></li>
+					            <li><a href='#' data-role="button"><img src='../images/cat_drum.jpg' /><br>Drums</a></li>
+			        		</ul>
+			    		</div>
+			  		<div id='right_scroll' data-role="button" data-icon="arrow-r" data-iconpos="notext" data-theme="b"></div>
+			  	</div>	
+
+
+			</div>
+			
+			<div id="footer" data-role="footer" data-theme="b" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal" data-theme="b" data-mini="true" >
+						<a href="about_us.html" data-role="button"  >About Us</a>
+						<a href="contact_us.html" data-role="button" >Contact Us</a>
+						<a href="../index.html" data-role="button">Full Site</a>
+				</div>
+			
+				<p class="copyright">&copy; 2013 Mystic Rhythms Music. All rights reserved.</p></div>
+	
+			</div>
+ 
+	</body>
+</html>

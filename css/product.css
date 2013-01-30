@@ -1,0 +1,92 @@
+	#products_container{
+		clear: both;
+		margins: auto;
+	}
+	
+	.product_grid{
+		display: block;
+		border: 1px solid lightgray;
+	    margin: auto;	
+	    padding: 5px 0px 5px 0px;
+	    float: left;
+	    /* Width and height for each item */
+	    width: 33%;
+	    height: 200px;
+	    text-align: center;
+	    background-color: white;
+	    text-decoration: none;
+	}
+	
+	#grid_end{
+	    clear:both;
+	}	
+	
+	#product_grid_name {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	#product_grid_image {
+		height: 105px;
+		width: 100%;
+		clear: both;
+	}
+
+	#product_grid_info {
+		oveflow: hidden;
+		position: absolute;
+		bottom: 0;
+		margin: 0px;
+		padding: 0px;
+	}	
+	
+	.buy_button{
+		background-color: red;
+		border-radius: 5px 5px 5px 5px;	
+		font-size: 115%;
+		font-weight: bold;
+		color: white;	
+		margin: auto;		
+	}
+	
+	#gallery {
+		clear: both;
+		margin: auto;
+		border: 2px solid rgb(0, 108, 186);
+		width: 600px;
+		border-radius: 5px 5px 5px 5px;					
+	}
+	
+	#thumbs { 
+		padding-top: 10px; 
+		overflow: hidden; 
+		border-top: 2px solid rgb(0, 108, 186);
+	}
+	
+	 #largeImage {
+		max-width: 545px;
+		max-height: 330px;
+	    display:block;
+      		margin-left:auto;
+      		margin-right:auto;
+		overflow: hidden;
+	}
+	
+	#thumbs img {
+		padding: 4px;
+		background-color: white;
+		cursor: pointer;
+		margin: 0 5px 0 5px;
+	}
+
+	#image_panel { 
+   			position: relative;
+     /*	overflow: hidden;*/
+		clear: both;
+		margin: auto;
+		width: 600px;
+		height: 350px;
+		padding: 5px;
+	}
