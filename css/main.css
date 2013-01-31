@@ -112,27 +112,16 @@
 		float:left;
 		width:150px;
 		padding: 0px;
-/*		margin: 0px 0px 0px 100px; */
-margin: 0px 20px 0px 10px;
+		margin: 0px 20px 0px 10px;
 		border-radius: 5px 5px 5px 5px;
 		background-color: white;
 		overflow: hidden;
-/*
-		border-width: 1px; 
-		border-style: solid; 
-		border-color: rgb(0,108,186);
-*/
 	}
 
 	#centerContent{
-/*		margin-left: 275px;
-		margin-right: 275px;
-
-margin-left: 195px;
-margin-right: 195px;
-*/
-margin: 0 auto 0 170px;
+		margin: 0px auto 0px auto;
 		min-height: 468px;
+		max-width: 900px;
 		padding: 5px;
 		border-width: 4px; 
 		border-style: solid; 
@@ -146,12 +135,9 @@ margin: 0 auto 0 170px;
 	}
 	
 	#centerContentSingle{
-/*		margin-left: 275px;
-		margin-right: 275px;
-*/
-margin-left: 225px;
-margin-right: 225px;
+		margin: 0px auto 0px auto;
 		min-height: 468px;
+		max-width: 900px;
 		padding: 5px;
 		border-width: 4px; 
 		border-style: solid; 
@@ -179,8 +165,7 @@ margin-right: 225px;
 		float:right;
 		width:150px;
 		padding: 5px;
-/*		margin: 0px 100px 0px 0px;*/
-margin: 0px 10px 0px 20px;
+		margin: 0px 10px 0px 20px;
 		background-color: white;
 	}
 
@@ -217,4 +202,56 @@ margin: 0px 10px 0px 20px;
 		text-align: center;
 		margin: 0px;
 		padding: 0px;
+	}
+	
+	.cart_qty  {
+    text-align: right;
+    width: 3em;
+	}
+	.button_form {
+	    margin: 0;
+	    padding: 0;
+	    float: left;
+	}
+	.inline {
+	    display: inline;
+	    margin-left: .5em;
+	}
+
+	#add_to_cart_form {
+	    margin: .25em;
+	}
+	#add_to_cart_form input {
+	    float: none;
+	}
+
+	#cart {
+	    margin: 0;
+	    padding: 1em .25em;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+	#cart_header th {
+	    border-bottom: 2px solid black;
+	}
+	#cart_footer td {
+	    border-top: 2px solid black;
+	    font-style: bold;
+	}
+	#cart td {
+	    padding: .25em 0;
+	}
+	
+	#login_form label {
+	    width: 5em;
+	    padding-right: 1em;
+	}
+	#payment_form label {
+	    width: 8em;
+	    padding-right: 1em;
+	}
+	#payment_form input[text] {
+	    width: 5em;
+	    margin: 0;
+	    padding-right: 1em;
 	}

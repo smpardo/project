@@ -53,7 +53,13 @@
 									</div>
 									<div class="product_grid_image">
 										<a href="<?php echo '?product_id=' . $product['productID']; ?>" >
-						        	  		<?php echo '<img src="../images/catalog/thumbs/' .  $product['productThumbnail'] . '">'; ?> 
+						        	  		<?php 
+						        	  			if ($product['productThumbnail'] !='') :
+						        	  				echo '<img src="../images/catalog/thumbs/' .  $product['productThumbnail'] . '">'; 
+						        	  			else :
+						        	  				echo '<img src="../images/catalog/thumbs/no_photo.jpg">';						        	  				
+						        	  			endif;
+						        	  		?> 
 						        	  	</a>
 									</div>
 									<div class="product_grid_info">

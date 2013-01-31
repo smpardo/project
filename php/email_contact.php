@@ -1,3 +1,5 @@
+<?php require_once('../util/main.php'); ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,25 +12,22 @@
 		<link rel="stylesheet" href="../css/nav.css" />
 	
 		<style>
-			#blog_frame {
-				height: 1000px;
-				width: 100%;
-				frameborder: 0;
-				border:none;
+			h2 {
+				font-weight: bold;
+				font-style: italic;
+				color: rgb(0, 108, 186);
 			}
-
 		</style>
-	
+		
+
 	</head>
 	<body>	
 	<div id="wrapper">
-		<?php 
-			$no_quote = "Y";
-		include '../view/header.php'; ?>
+		<?php include '../view/header.php'; ?>
 		
 		<div id="container">
-			<div id="contentSingle">				
-				<iframe id="blog_frame" src="http://localhost/wordpress/" seamless></iframe>
+			<div id="centerContentSingle">		
+				<h2>Thanks for contacting us, we will get back to you as soon as possible.</h2>	
 			</div>
 		</div>
 		<?php include '../view/footer.php'; ?>	

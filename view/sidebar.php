@@ -15,7 +15,7 @@ require_once('../model/category_db.php');
 					//only if the category is NOT a subcategory, if it is we ignore
 				    $cat_name = $category['categoryName'];
 				    $cat_id = $category['categoryID'];
-				    $url = 'http://localhost/scott/project/catalog?category_id=' . $cat_id;
+				    $url = $app_path .'catalog?category_id=' . $cat_id;
 				    echo '<li><a href="' . $url . '">' . $cat_name . ' (' . $category['productCount'] . ')</a>';
 				    //now get a list of the subcategories under the category.
 				    //if we have any, create a sub list, output the list items and then close the sub list
@@ -26,12 +26,12 @@ require_once('../model/category_db.php');
 				        foreach($subcategories as $subcategory) :
 					    	$subcat_name = $subcategory['categoryName'];
 					        $subcat_id = $subcategory['categoryID'];
-					        $url = 'http://localhost/scott/project/catalog?subcategory_id=' . $subcat_id;
+					        $url = $app_path .'catalog?subcategory_id=' . $subcat_id;
 					        echo '<li><a href="' . $url . '">' . $subcat_name . ' (' . $subcategory['productSubCount'] . ')</a></li>';
 				        endforeach;
 				        echo '</ul>';
-				        echo '</li>';
 				    endif;
+					echo '</li>';
 				endif;
 			endforeach;
 			echo '</ul>';

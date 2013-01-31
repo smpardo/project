@@ -1,24 +1,24 @@
 /*MAIN NAVIGATION BAR STYLES*/
 	#nav_container {
-		width: 70%;
-		padding: 0px;
-		margin: auto;
+		background-color: rgb(0, 108 186);
+		border: 0px;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 	
-	/* Remove margins and padding */
 	#main ul {
-		margin: 0 auto;
+		margin: 0;
 		padding: 0;
 	}
 	
-	/* Set display */
 	#main_nav li {
 		display: inline-block;
 	}
 	
-	/* Add padding, Style fonts */
 	#main_nav a {
-		padding: 0px 20px 0px 10px;
+		padding: 0px 10px 0px 10px;
 		font-size: 90%;
 		font-weight: bold;
 		color: white;
@@ -41,7 +41,6 @@
 		position: absolute;
 		left: -9999px;
 		text-align: left;
-		width: 100px;
 		background-color: rgb(0,108,186);
 		border-width: 1px; 
 		border-style: solid; 
@@ -65,8 +64,8 @@
 	
 	#main li:hover ul a {
 		text-decoration: none;
-		background-color: rgb(0,108,186); 
 		color: white;
+		background-color: rgb(0,108,186); 
 	}
 	
 	#main li:hover ul a:hover {

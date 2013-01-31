@@ -61,6 +61,12 @@
 				border-radius: 5px 5px 5px 5px;		
 				box-shadow: 2px 2px 2px 2px black;
 			}
+			
+			h1, h2 {
+				font-weight: bold;
+				font-style: italic;
+				color: rgb(0, 108, 186);
+			}
 		</style>
 
 	</head>
@@ -96,16 +102,17 @@
 				<!-- add image viewer for product -->
 				    
 				<h1><?php echo $product_name; ?></h1>	
-				<?php if (count($product_pics) != 0) : ?>
+
 					<div id="gallery">
+				<?php if (count($product_pics) != 0) : ?>					
 				     <?php //first we check to make sure we have images
-				     		if ($image_count == 0) :
+				     		//if ($image_count == 0) :
 				     ?>
 						    <div id="image_panel">
 						    	<!--  we only need to output the first image into the large viewer -->
 						   		<?php echo '<img id="largeImage" src="../images/catalog/large/' .  $product_pics[0]['productImageFileName'] . '"/>'; ?> 
 						    </div>
-				 			<?php endif;?>
+				 			<?php //endif;?>
 				 			
 						    <div id="thumbs">
 						    <?php foreach ($product_pics as $pic) : 
@@ -113,8 +120,19 @@
 						    	endforeach;
 						    ?>
 						    </div>
+					<?php else :?>
+							<div id="image_panel">
+						    	<!--  we only need to output the first image into the large viewer -->
+						   		<?php echo '<img id="largeImage" src="../images/catalog/large/no_photo.jpg"/>'; ?> 
+						    </div>
+				 			<?php //endif;?>
+				 			
+						    <div id="thumbs">
+						    	<?php echo '<img src="../images/catalog/small/no_photo.jpg"/>';?>
+						    </div>
+					<?php endif; ?>
 				</div>				
-				    <?php endif; ?>
+
 				<!-- Image viewer above -->
 
 				    <h2>Description</h2>

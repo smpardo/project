@@ -30,7 +30,8 @@ foreach ($product_ids as $product_id) {
 		<style>
 			#slideshow {
 				border: 1px solid lightgray;	
-				margin:0px auto; 			
+				margin:0px auto; 
+				width: 700px;			
 			}
 			
 			#slideshow #slideshowWindow { 
@@ -68,15 +69,18 @@ foreach ($product_ids as $product_id) {
 				color:black; 
 			} 
 
-			.slideLink" {
+			.slideLink {
 				border: 1px solid black;
-				border-radius: 0px 0px 5px 5px;
-				background-color: rgb(0,108,186);	
+				border-radius: 5px 5px 5px 5px;
+				background-color: red;
+				width: 100px;
+				text-align: center;	
+				font-weight: bold;
 			}
 					
 			#slideshow #slideshowWindow .slide .slideText a:link, 
 			#slideshow #slideshowWindow .slide .slideText a:visited { 
-				color:black; 
+				color:white; 
 				text-decoration:none; 
 			} 
 			
@@ -86,10 +90,15 @@ foreach ($product_ids as $product_id) {
 				padding:0; 
 			}			
 			
-			h2, h3 {
+			h1, h2, h3 {
 				font-family: times new roman;
 				font-weight: bold;
 				font-style: italic;
+				color: rgb(0, 108, 186);
+			}
+			
+			h3 {
+				color: black;
 			}
 			
 		</style>
@@ -132,39 +141,37 @@ foreach ($product_ids as $product_id) {
 		
 		<div id="container">
 			<div id="centerContentSingle">				
-				<h2>Welcome to Mystic Rhythms...<span style="font-size: 85%">Your Guitar and Drum Superstore.</span></h2>
-				<h3>Featured Items:</h3>
+				<h1>Welcome to Mystic Rhythms...<span style="font-size: 85%">Your Guitar and Drum Superstore.</span></h1>
+				<h2>Featured Items:</h2>
 			
 				<div id="slideshow"> 
 					<div id="slideshowWindow"> 
 						<div class="slide"> 
-							<img src="images/catalog/large/gib_lp_std_front.jpg" /> 
+							<img src="images/catalog/features/feature_gib_sg.jpg" /> 
 							<div class="slideText"> 
-							 	<h3 class="slideTitle">Gibson Les Paul Standard</h3> 
-						 		<p class="slideDes">Lorem ipsum dolor sit amet, consectetur 
-						 		adipisicing elit, sed do eiusmod tempor incididunt ut labore 
-						 		et dolore magna aliqua.</p> 
-						 		<p class="slideLink"><a href="http://localhost/scott/project/catalog/?product_id=2">Shop Now</a></p> 
+							 	<h3 class="slideTitle">Gibson SG Faded</h3> 
+						 		<p class="slideDes">This Gibson SG electric guitar takes the best of the '62 original 
+						 			and adds the longer and sturdier neck joint of the late '60s models. 
+						 			All the classic features you'd expect from a historic guitar.</p> 
+						 		<p class="slideLink"><a href="catalog/?product_id=3">Shop Now</a></p> 
 							</div>
 						</div> 
 						<div class="slide"> 
-							<img src="images/catalog/large/gib_lp_std_back.jpg" /> 
+							<img src="images/catalog/features/feature_wash_d10s.jpg" /> 
 							<div class="slideText"> 
-							 	<h3 class="slideTitle">Guitar 4</h3> 
-						 		<p class="slideDes">Lorem ipsum dolor sit amet, consectetur 
-						 		adipisicing elit, sed do eiusmod tempor incididunt ut labore 
-						 		et dolore magna aliqua.</p> 
-						 		<p class="slideLink"><a href="http://localhost/scott/project/catalog/?product_id=4">Shop Now</a></p> 
+							 	<h3 class="slideTitle">Washburn D10S</h3> 
+						 		<p class="slideDes">The Washburn D10S Flame Top acoustic guitar is made with a solid 
+						 		Alaskan Sitka spruce top, and mahogany back and sides.</p> 
+						 		<p class="slideLink"><a href="catalog/?product_id=5">Shop Now</a></p> 
 							</div>
 						</div> 
 						<div class="slide"> 
-							<img src="images/catalog/large/gib_lp_std_oblique.jpg" /> 
+							<img src="images/catalog/features/feature_fen_strat.jpg" /> 
 							 <div class="slideText"> 
-							 	<h3 class="slideTitle">Guitar 5</h3> 
-						 		<p class="slideDes">Lorem ipsum dolor sit amet, consectetur 
-						 		adipisicing elit, sed do eiusmod tempor incididunt ut labore 
-						 		et dolore magna aliqua.</p> 
-						 		<p class="slideLink"><a href="http://localhost/scott/project/catalog/?product_id=5">Shop Now</a></p> 
+							 	<h3 class="slideTitle">Fender Stratocaster Standard</h3> 
+						 		<p class="slideDes">This Classic Fender Stratocaster features an alder body, a maple neck 
+						 		with a 9.5" radius, 21 medium jumbo frets and vintage-style single-coil pickups.</p> 
+						 		<div class="slideLink"><a href="catalog/?product_id=1">Shop Now</a></div> 
 							 </div>						
 						</div> 
 					</div>

@@ -5,7 +5,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/scott/project/model/header_db.php');
 
 		<div id="header">
 			<div id="logo">
-				<img src="http://localhost/scott/project/images/mr_main_logo_m.png" alt="Mystic Rhythms"/>
+				<a href="http://localhost/scott/project/">
+					<img src="<?php echo $app_path .'images/mr_main_logo_m.png' ?>" alt="Mystic Rhythms"/>
+				</a>
 			</div>
 			
 			<div id="top_nav">
@@ -24,8 +26,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/scott/project/model/header_db.php');
                 		<li><a href="<?php echo $account_url; ?>">Login/Register</a></li>
             		<?php endif; ?>
         			<li><a href="<?php echo $app_path . 'cart'; ?>">View Cart</a></li>
-        			<li><a href="http://localhost/scott/project/">Home</a></li>
-					<li><a href="#">Contact</a></li>				
+        			<li><a href="<?php echo $app_path . 'index.php' ?>">Home</a></li>
+					<li><a href="<?php echo $app_path . '/contact_mr.php'?>">Contact</a></li>				
 				</ul>
 			</div>
 			<div id="cust_serv">Customer Service: 1-800-PLAY-GTR</div>		
@@ -56,32 +58,32 @@ include($_SERVER['DOCUMENT_ROOT'] . '/scott/project/model/header_db.php');
 			<div id="main_nav">
 				<div id="nav_container">
 					<ul id="main">
-						<li><a href="http://localhost/scott/project/catalog?category_id=1">Guitars</a>
+						<li><a href="<?php echo $app_path . 'catalog?category_id=1'?>">Guitars</a>
 							<ul>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=6">Electric</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=7">Acoustic</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=8">Clasical</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=6'?>">Electric</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=7'?>">Acoustic</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=8'?>">Clasical</a></li>
 							</ul>
 						</li>
-						<li><a href="http://localhost/scott/project/catalog?category_id=2">Bass</a></li>						
-						<li><a href="http://localhost/scott/project/catalog?category_id=3">Drums</a>
+						<li><a href="<?php echo $app_path . 'catalog?category_id=2'?>">Bass</a></li>						
+						<li><a href="<?php echo $app_path . 'catalog?category_id=3'?>">Drums</a>
 							<ul>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=10">Acoustic</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=11">Electric</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=12">Cymbals</a></li>						
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=10'?>">Acoustic</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=11'?>">Electric</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=12'?>">Cymbals</a></li>						
 							</ul>
 						</li>
-						<li><a href="http://localhost/scott/project/catalog?category_id=4">Amps/Effects</a>
+						<li><a href="<?php echo $app_path . 'catalog?category_id=4'?>">Amps/Effects</a>
 							<ul>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=12">Guitar</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=13">Bass</a></li>
-								<li><a href="http://localhost/scott/project/catalog?subcategory_id=14">Pedals</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=12'?>">Guitar</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=13'?>">Bass</a></li>
+								<li><a href="<?php echo $app_path . 'catalog?subcategory_id=14'?>">Pedals</a></li>
 							</ul>
 						</li>
-						<li><a href="http://localhost/scott/project/catalog?category_id=5">Accessories</a></li>
-						<li><a href="http://localhost/scott/project/images.html">Guitar University</a></li>
-						<li><a href="http://localhost/scott/project/images.html">Fun Stuff</a></li>
-						<li><a href="http://localhost/scott/project/blog/">Blog</a></li>						
+						<li><a href="<?php echo $app_path . 'catalog?category_id=5'?>">Accessories</a></li>
+						<li><a href="<?php echo $app_path . 'guitar_u.php'?>">Guitar University</a></li>
+						<li><a href="<?php echo $app_path . 'images.html'?>">Fun Stuff</a></li>
+						<li><a href="<?php echo $app_path . 'blog.php'?>">Blog</a></li>						
 					</ul>
 				</div>
 			</div>
