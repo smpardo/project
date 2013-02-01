@@ -49,7 +49,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/scott/project/model/header_db.php');
 						$quote_of_the_page = get_quote();
 						echo $quote_of_the_page['quote'] . " - " .  $quote_of_the_page['author'] .", " . $quote_of_the_page['source'];
 					else :
-						echo '&nbsp';
+						echo "Changes aren't permanent, but Change is. - Rush, Tom Sawyer - Moving Pictures";
 					endif;
 					
 				?>
@@ -82,7 +82,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/scott/project/model/header_db.php');
 						</li>
 						<li><a href="<?php echo $app_path . 'catalog?category_id=5'?>">Accessories</a></li>
 						<li><a href="<?php echo $app_path . 'guitar_u.php'?>">Guitar University</a></li>
-						<li><a href="<?php echo $app_path . 'images.html'?>">Fun Stuff</a></li>
+						<li><a href="<?php echo $app_path . 'chord_book.php'?>">Chord Book</a></li>
 						<li><a href="<?php echo $app_path . 'blog.php'?>">Blog</a></li>						
 					</ul>
 				</div>
