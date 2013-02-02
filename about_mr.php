@@ -14,12 +14,6 @@ require_once('util/main.php');
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/nav.css" />
 		<script src="js/jquery-1.8.0.js"></script>
-	
-		<style>
-			
-		</style>
-		
-
 	</head>
 	<body>	
 	<div id="wrapper">
@@ -56,9 +50,8 @@ require_once('util/main.php');
 				right? </p>
 				
 				<p> Here is the video of the song as a bonus.  ignore the haristyles and clothes - it was the 80's after all. Enjoy! </p>
-				
-				<iframe width="480" height="360" src="http://www.youtube.com/embed/rxwRzW6ehAU?rel=0" ></iframe>
-				
+				<iframe width="480" height="360" src="http://www.youtube.com/embed/4J4k4yaY-yY?rel=0" frameborder="0"></iframe>
+								
 			</div>
 		</div>
 		<?php include 'view/footer.php'; ?>	

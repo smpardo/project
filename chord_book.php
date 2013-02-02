@@ -22,7 +22,7 @@
 			}	
 
 			#svgContainer{
-				width: 700px;
+				width: 850px;
 				margin: 0 auto;
 				clear: both;
 			}
@@ -53,8 +53,13 @@
 				margin: auto;		
 			}
 			
+			#chordForm{
+				clear: both;	
+				margin: 0px auto;
+			}
+						
 			#chordList{
-							font-size: 115%;	
+				font-size: 115%;	
 			}
 		</style>	
 		
@@ -70,8 +75,15 @@
 				<h2 id="title">Mystic Rhythms Chord Book</h2>
 				
 				<div id="svgContainer">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="450" viewBox="0 0 400 450">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="450" viewBox="0 0 600 450">
 
+						<!-- Legend -->
+						<text  x='20' y='375' fill='black' font-size='16' visibility='visible'>Legend:</text>
+						<text  x='20' y='395' fill='black' font-size='16' visibility='visible'>O - String played but not fretted. </text>
+						<text  x='20' y='415' fill='black' font-size='16' visibility='visible'>X - String not played and not fretted.</text>
+						<circle  cx='20' cy='432' r='10' stroke='black' stroke-width='2' fill='red' visibility='visible'/>
+						<text  x='38' y='435' fill='black' font-size='16' visibility='visible'> - String Fretted and played (put a finger here).</text>
+						
 						<!-- open/unplayed strings -->
 						<text id="lowE" x='20' y='75' fill='black' font-size='16' visibility='hidden'>O</text>
 						<text id="a" x='70' y='75' fill='black' font-size='16' visibility='hidden'>O</text>
@@ -130,22 +142,23 @@
 						<circle id="finger4" cx='115' cy='34' r='10' stroke='black' stroke-width='2' fill='red' visibility='hidden'/>
  					
 						<!-- Chord Name -->
-						<text id="chordNameText" x='30' y='400' font-size='48' fill='rgb(0, 108, 186)' font-style='italic'></text> 						
+						<text id="chordNameText" x='400' y='200' font-size='48' fill='rgb(0, 108, 186)' font-style='italic'></text> 						
  					</svg>
 					<div id="chordControl">
 						<p>Select a chord form the list and click Show Chord to see and hear it.</p>
-						<select id="chordList" name="chordList" size="7">
-							<option>Open A</option>
-						    <option>Open B</option>
-						    <option>Open C</option>
-						    <option>Open D</option>
-						    <option>Open E</option>
-						    <option>Open F</option>						    
-						    <option>Open G</option>						    
-					 	</select>
-					 	<br>
+						<form id="chordForm">
+							<select id="chordList" name="chordList" size="7">
+								<option>A Major</option>
+							    <option>B Major</option>
+							    <option>C Major</option>
+							    <option>D Major</option>
+							    <option>E Major</option>
+							    <option>F Major</option>						    
+							    <option>G Major</option>						    
+						 	</select>
+						 	
 						<button type="button" onclick="changeChord();">Show Chord</button>			
-					
+						</form>
 					</div>
 	
 	

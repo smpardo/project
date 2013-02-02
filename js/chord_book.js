@@ -12,7 +12,7 @@
 	  	var chordName = document.getElementById("chordList").value;
 
 		//now check against the chords we are expecting and find a match
-	  	if (chordName == 'Open A'){
+	  	if (chordName == 'A Major'){
 			//now grab each of the strings that are not to be played and place Xs
 			//we are just toggling the invisibility
 	       	string = document.getElementById("xlowE");	
@@ -43,14 +43,14 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');						
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "A Chord";
+	       	text.textContent = chordName;
 	       	
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/a-major-open.ogg');
 	       	audio.play();
 
 	  	}
-	  	if (chordName == 'Open B'){
+	  	if (chordName == 'B Major'){
 			//now grab each of the strings that are not to be played and place Xs
 			//we are just toggling the invisibility
 	       	string = document.getElementById("xlowE");	
@@ -85,13 +85,13 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "B Chord";			       	
+	       	text.textContent = chordName;			       	
 
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/b-major-bar.ogg');
 	       	audio.play();
 	  	}
-	  	if (chordName == 'Open C'){
+	  	if (chordName == 'C Major'){
 			//now grab each of the strings that are not to be played and place Xs
 			//we are just toggling the invisibility
 	  		string = document.getElementById("xlowE");	
@@ -123,13 +123,13 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');	
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "C Chord";	
+	       	text.textContent = chordName;	
 
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/c-major-open.ogg');
 	       	audio.play();		  		
 	  	}
-	  	if (chordName == 'Open D'){
+	  	if (chordName == 'D Major'){
 			//now grab each of the strings that are not to be played and place Xs
 			//we are just toggling the invisibility
 	  		string = document.getElementById("xlowE");	
@@ -161,14 +161,14 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');				  		
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "D Chord";		
+	       	text.textContent = chordName;		
 
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/d-major-open.ogg');
 	       	audio.play();		       
 	   	}
 
-	  	if (chordName == 'Open E'){
+	  	if (chordName == 'E Major'){
 			//grab each string to be played open and place the Os
 			//we are just toggling the invisibility
 	       	string = document.getElementById("lowE");	
@@ -198,13 +198,13 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "E Chord";				       	
+	       	text.textContent = chordName;				       	
 
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/e-major-open.ogg');
 	       	audio.play();
 	  	}
-	  	if (chordName == 'Open F'){
+	  	if (chordName == 'F Major'){
 			//now grab each of the strings that are not to be played and place Xs
 			//we are just toggling the invisibility
 	  		string = document.getElementById("xlowE");	
@@ -236,13 +236,13 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "F Chord";	
+	       	text.textContent = chordName;	
 
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/f-major-bar.ogg');
 	       	audio.play();
 		 }
-	  	if (chordName == 'Open G'){
+	  	if (chordName == 'G Major'){
 			//grab each string to be played open and place the Os
 			//we are just toggling the invisibility
 	       	string = document.getElementById("d");	
@@ -271,7 +271,7 @@
 	       	finger.setAttributeNS(null, 'visibility', 'visible');
 
 	       	text = document.getElementById("chordNameText");
-	       	text.textContent = "G Chord";	
+	       	text.textContent = chordName;	
 	       	//then make some noise
 	       	audio.setAttribute('src', 'media/audio/g-major-open.ogg');
 	       	audio.play();

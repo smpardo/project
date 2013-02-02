@@ -1,4 +1,9 @@
+<?php
 
+require_once('../util/main.php');
+require_once('../model/product_db.php');
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -51,7 +56,7 @@
 		<div id="page" data-role="page" >
 
 			<div id="header" data-role="header" data-theme="a">
-				<a href="index.html" data-icon="home" data-iconpos="notext" data-mini="true"></a>
+				<a href="index.php" data-icon="home" data-iconpos="notext" data-mini="true"></a>
 				<img id="logo" src="../images/mr_main_logo_m.png" alt="Mystic Rhythms" />
 			</div>
 		
@@ -65,43 +70,42 @@
 						<div id="slideshowWindow"> 
 							<div class="slide"> 
 								<img src="../images/mobile/guitar.jpg" /> 
-								<a href="guitars.html"></a>
+								<a href="products.php?subcategory_id=6"></a>
 								<div class="slideText"> 
 								 	<h3 class="slideTitle">Electric Guitars</h3> 
 								</div>
 							</div> 
 							<div class="slide"> 
 								<img src="../images/mobile/acoustic.jpg" /> 
-								<a href="guitars.html"></a>
+								<a href="products.php?subcategory_id=7"></a>
 								<div class="slideText"> 
 								 	<h3 class="slideTitle">Acoustic Guitars</h3> 
 								</div>
 							</div> 
 							<div class="slide"> 
 								<img src="../images/mobile/bass.jpg" /> 
-								 <a href="bass.html"></a>
+								 <a href="products.php?category_id=2"></a>
 								 <div class="slideText"> 
 								 	<h3 class="slideTitle">Bass Guitar</h3> 
 								 </div>						
 							</div> 
 							<div class="slide"> 
 								<img src="../images/mobile/drums.jpg" /> 
-								<a href="drums.html"></a>
+								<a href="products.php?category_id=3"></a>
 								<div class="slideText"> 
 								 	<h3 class="slideTitle">Drums</h3> 
 								</div>
 							</div> 
 							<div class="slide"> 
 								<img src="../images/mobile/accessories.jpg" /> 
-								<a href="#"></a>
+								<a href="products.php?category_id=5"></a>
 								<div class="slideText"> 
 								 	<h3 class="slideTitle">Accessories</h3> 
 								</div>
 							</div> 
 						</div>
 					</div>				
-					<span class="topText">Please vist our Full Site</span> <br>
-					<span class="topText">for product details and to purchase.</span>				
+					<span class="topText">Click a category to view products.</span>				
 				</div>
 			</div>
 			
@@ -109,10 +113,10 @@
 				<div data-role="controlgroup" data-type="horizontal" data-theme="b" data-mini="true" >
 						<a href="about_us.html" data-role="button"  >About Us</a>
 						<a href="contact_us.html" data-role="button" >Contact Us</a>
-						<a href="../index.html" data-role="button">Full Site</a>
+						<a href="../index.php" data-role="button"  rel="external">Full Site</a>
 				</div>
 			
-				<p class="copyright">&copy; 2013 Mystic Rhythms Music. All rights reserved.</p></div>
+				<p class="copyright">&copy; 2013 Mystic Rhythms Music. All rights reserved.</p>
 			</div> 
 		</div>
 	</body>
